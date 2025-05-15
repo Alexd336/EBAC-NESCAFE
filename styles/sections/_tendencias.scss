@@ -1,0 +1,124 @@
+
+@import '../base/variables';
+@import '../base/mixins';
+
+.video-background {
+  position: relative;
+  width: 100%;
+  border-top-left-radius: $border-radius-large;
+  border-bottom-right-radius: $border-radius-large;
+  z-index: 9;
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+
+.tendencias {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      animation: destacarTitulo 1s ease-in-out;
+    }
+  }
+
+  &__contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+  }
+}
+
+.tendencia {
+  background-color: $color-fondo-opcion; 
+  border-radius: $border-radius-md; 
+  overflow: hidden;
+  box-shadow: $card-shadow; 
+  transition: transform 0.3s ease;
+  color: $color-gray-light;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__imagen {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-width: 600px;
+      max-width: 400px;
+      min-height: 200px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "Plant-based";
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      background-color: $color-accent; 
+      color: $color-dark;
+      padding: 5px 10px;
+      border-radius: $border-radius-sm; 
+      font-size: 0.8em;
+      transform: rotate(-45deg);
+      transform-origin: top left;
+    }
+  }
+
+  &__etiqueta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: $color-accent; 
+    color:$text-color; 
+    padding: 5px 10px;
+    border-radius: $border-radius-sm; 
+    font-size: 0.8em;
+  }
+
+  &__info {
+    padding: 20px;
+    text-align: center;
+   
+
+    p {
+      margin: 5px 0;
+    }
+
+    h3 {
+      margin-top: 10px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color:$text-color; 
+        color: black;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+@keyframes destacarTitulo {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

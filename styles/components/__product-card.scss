@@ -1,0 +1,124 @@
+.product-card {
+    background-color: $color-bg;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: $font-main;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+  
+    &__title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-color;
+      margin-bottom: 0.25rem;
+    }
+  
+    &__brand {
+      font-size: 0.9rem;
+      color: darken($text-color, 20%);
+      margin-bottom: 1rem;
+    }
+  
+    &__image-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  
+    &__image {
+      max-width: 80%;
+      height: auto;
+    }
+  
+    &__description {
+      font-size: 0.95rem;
+      color: $text-color;
+      margin-bottom: 1rem;
+    }
+  
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__add-cart {
+      background: linear-gradient(to right, #8b5e3c, $color-primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+
+      &:hover{
+        background: linear-gradient(to right, #d4ae91, $color-primary);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+  
+      i {
+        font-size: 1rem;
+      }
+
+    }
+  
+    &__compare {
+      background: none;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+
+      &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      
+    }
+  
+    &__compare-text {
+      font-size: 0.75rem;
+      color: $text-color;
+    }
+  }
+
+
+
+
+body {  //paddings topbar - header responsive
+
+  // Padding inicial (para desktop por defecto)
+  padding-top: map-get($header-heights, 'desktop');
+
+  // Ajustar para otros breakpoints
+  @include respond-to('laptop') {
+    padding-top: map-get($header-heights, 'laptop');
+  }
+  @include respond-to('tablet') {
+    padding-top: map-get($header-heights, 'tablet');
+  }
+  @include respond-to('mobile-large') {
+    padding-top: map-get($header-heights, 'mobile-large');
+  }
+  @include respond-to('mobile-small') {
+    padding-top: map-get($header-heights, 'mobile-small');
+  }
+}

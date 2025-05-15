@@ -1,0 +1,69 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.hero-img,
+.hero-img2,
+.hero-img3 {
+  margin-top: 20px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: url('../Img/haztumundo/sect1.jpg') no-repeat center center/cover;
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-overlay; 
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    color: $color-text-light; 
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      padding-top: 25%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 5px;
+      background: $color-primary; 
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.hero-img2 {
+  background: url('../Img/haztumundo/sect2.jpg') no-repeat center center/cover;
+}
+
+.hero-img3 {
+  background: url('../Img/haztumundo/sect3.jpg') no-repeat center center/cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

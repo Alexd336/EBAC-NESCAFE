@@ -1,0 +1,494 @@
+
+// Estilos generales para los enlaces
+a {
+    @include link-style($color-dark);
+  }
+  
+  .hero-sections {
+    @include hero-section('../Img/screen7.svg');
+  
+    .hero-contents {
+      position: relative;
+      z-index: 1;
+      max-width: $max-width-hero;
+      padding: $padding;
+  
+      h1 {
+        font-size: clamp(2rem, 5vw, $font-size-large);
+        margin-bottom: $margin-small;
+      }
+  
+      .intro-text {
+        font-size: clamp(1rem, 3vw, $font-size-medium);
+      }
+    }
+  }
+  
+  // Sección principal
+  .main-content {
+    padding: $padding;
+    max-width: $max-width-content;
+    margin: auto;
+  }
+  
+  .content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: $margin-medium;
+    flex-wrap: wrap;
+  
+    .text-block {
+      max-width: 50%;
+      text-align: left;
+    }
+  
+    .content-image {
+      max-width: 100%;
+      height: 50%;
+      margin: $margin-small;
+    }
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $margin-small;
+  
+    .details span {
+      padding: $padding-small $padding-medium;
+      border-radius: $border-radius-base;
+      font-size: $font-size-small;
+    }
+  }
+  
+  // Sección de información adicional
+  .info-section {
+    display: flex;
+    justify-content: space-around;
+    padding: $padding;
+    flex-wrap: wrap;
+  
+    .info-block {
+      text-align: center;
+      max-width: $max-width-info;
+      margin: $margin-small;
+  
+      img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: $margin-small;
+      }
+  
+      .explore-link {
+        display: inline-block;
+        margin-top: $margin-small;
+        font-weight: $font-weight-bold;
+  
+  
+        h4 {
+          font-size: $font-size-medium;
+          font-weight: $font-weight-bold;
+          margin-bottom: $margin-small;
+        }
+  
+        p {
+          font-size: $font-size-small;
+          margin-bottom: $margin-small;
+        }
+  
+        img {
+          vertical-align: middle;
+          margin-left: $padding-small;
+        }
+      }
+    }
+  }
+  
+  .banner {
+    background: linear-gradient(to bottom, #bc822c, transparent);
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    .content-block {
+      flex-direction: column;
+    }
+  
+    .text-block {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .info-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  
+    .banner {
+      height: 300px;
+  
+      .content {
+        padding: 0 20px;
+      }
+  
+    }
+  
+  
+    @media (max-width: 480px) {
+      .banner {
+        height: 250px;
+      }
+  
+      .content h2 {
+        font-size: 1.5rem;
+      }
+  
+      .content p {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  
+  @mixin button-styles {
+    display: inline-block;
+    padding: $padding-small $padding-medium;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: $border-radius-base;
+    font-size: clamp(1em, 2vw, 1.2em);
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+  
+  @mixin heading-styles {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    margin-bottom: $margin-base;
+  }
+  
+  @mixin card-styles {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  @mixin button-style {
+    border-radius: $border-radius-base;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  main {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 50vh;
+    padding-bottom: 15%;
+  
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $color-light;
+    }
+  }
+  
+  .button {
+    @include button-styles;
+  }
+  
+  p {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: $dark-background-color;
+      color: $dark-text-color;
+    }
+  
+    .recetas,
+    .receta {
+      background-color: black;
+      color: white;
+    }
+  
+    .hero-sections,
+    .coffee-value-chain {
+      background-color: black;
+    }
+  
+    .opciones-cafe {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    a {
+      color: $color-light;
+    }
+  }
+  
+
+
+
+
+  //     
+
+
+
+
+
+  
+// Hero Section
+.hero-sections {
+    position: relative;
+    height: 400px;
+    background-image: url('../Img/screen7.svg');
+    background-size: cover;
+    background-position: center;
+    @include flex-center;
+    text-align: center;
+    color: white;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-overlay;
+    }
+  }
+  
+  .hero-contents {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+  
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      margin-bottom: 10px;
+    }
+  
+    .intro-text {
+      font-size: clamp(1rem, 3vw, 1.2em);
+    }
+  }
+  
+  // Sección principal
+  .main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .content-block {
+    @include flex-center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .text-block {
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .content-image {
+    max-width: 100%;
+    height: 50%;
+    margin: 10px;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  
+    span {
+      background-color: $color-fondo-info;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+  }
+  
+  // Sección de información adicional
+  .info-section {
+    @include flex-center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: $color-fondo-info;
+    flex-wrap: wrap;
+  }
+  
+  .info-block {
+    text-align: center;
+    max-width: 300px;
+    margin: 10px;
+  
+    img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+  
+  .explore-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+  
+    img {
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    .content-block {
+      flex-direction: column;
+    }
+  
+    .text-block {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .info-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  // Modo Noche
+  body.night-mode {
+    .hero-sections {
+      color: $color-texto-noche;
+    }
+  
+    .details span, .info-section {
+      background-color: darken($color-fondo-info, 20%);
+    }
+  
+    a {
+      color: lighten($color-link, 20%);
+  
+      &:hover {
+        color: lighten($color-link-hover, 20%);
+      }
+    }
+  }
+  
+  
+  
+  // Estilos Generales
+  .guia-nescafe {
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  .fondo-cafe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .contenido-guia {
+    position: relative;
+    padding: 20px;
+    color: $color-texto-claro;
+    text-align: center;
+  }
+  
+  h2, h3 {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  
+  p {
+    font-size: clamp(1rem, 3vw, 1.2em);
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+  }
+  
+  // Opciones de Café
+  .opciones-cafe {
+    @include flex-center();
+  }
+  
+  .opcion-cafe {
+    background-color: $color-fondo-opcion;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  // Modo Noche
+  body.night-mode {
+    .contenido-guia {
+      color: $color-texto-noche;
+    }
+  
+    .opcion-cafe {
+      background-color: darken($color-fondo-opcion, 30%);
+    }
+  }
+  

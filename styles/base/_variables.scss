@@ -1,0 +1,198 @@
+// Variables principales
+$primary-color: #583232;
+$secondary-color: #5a3d2b;
+$background-color: #fff;
+$background-dark :#121212;
+$text-color: #000;
+$dark-background-color: #121212;
+$dark-text-color: #ffffff;
+$font-family: Arial, sans-serif;
+$font-size-base: 1rem;
+$padding-base: 10px;
+$margin-base: 20px;
+$border-radius-base: 20px;
+$footer-border-radius: 150px;
+$border-radius-large: 500px;
+
+// Variables de colores adicionales
+$color-dark: #f6f6f5;
+$color-overlay: rgba(0, 0, 0, 0.5);
+$color-light: #ecf0f1;
+$color-accent: #3498db;
+
+// Tamaños comunes
+$max-width-hero: 800px;
+$max-width-content: 1200px;
+$max-width-info: 300px;
+$padding: 20px;
+$font-size-small: 0.9em;
+$font-size-large: 2.5rem;
+$font-weight-bold: bold;
+$font-size-medium: 1.2em;
+
+// Nuevas variables para tamaños de padding/márgenes
+$padding-small: 8px;
+$padding-medium: 15px;
+$padding-large: 25px;
+$margin-small: 10px;
+$margin-medium: 15px;
+$margin-large: 25px;
+
+//--
+
+// Variables
+$color-primario: brown;
+$color-primario-hover: darkred;
+$color-texto: white;
+$color-fondo-receta: rgb(112, 109, 109);
+$shadow-normal: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.2);
+$radius: 10px;
+
+// Modo noche
+$color-fondo-noche: #8d6a09;
+$color-texto-noche: #e0e0e0;
+
+// Variables
+$color-texto: #eee7e7;
+$color-texto-noche: #e0e0e0;
+$shadow-card: 0 4px 10px rgba(221, 215, 215, 0.941);
+$radius-card: 12px;
+
+// Variables
+$color-link: #eeede8;
+$color-link-hover: darken($color-link, 10%);
+$color-overlay: rgba(0, 0, 0, 0.5);
+$color-texto-noche: #e0e0e0;
+$color-fondo-info: #5a3d2b;
+
+// Variables
+$color-texto-claro: #fff;
+$color-fondo-opcion: rgba(255, 255, 255, 0.2);
+$color-texto-noche: #e0e0e0;
+$color-fondo-noche: #bcbaba;
+
+//--
+
+
+// =============================================
+// 1. Variables Base
+// =============================================
+
+// Colores primarios
+$color-primary: #A86D48; // Café principal
+$color-secondary: #2E1400; // Café oscuro
+$color-accent: #FF5722; // Naranja/accent
+$color-background: #ffffff; // Fondo claro
+$color-text: #333333; // Texto oscuro
+$color-text-light: #ffffff; // Texto claro
+$color-overlay: rgba(49, 45, 45, 0.464); // Overlay
+
+
+// Colores adicionales
+$color-gray-light: #f0f0f0;
+$color-gray-medium: #cccccc;
+$color-gray-dark: #555555;
+
+
+// _variables.scss - product-card
+$color-primary: #5e2d0c;
+$color-bg: #fcf8f4;
+$color-text: #3a3a3a;
+$border-radius: 1.5rem;
+$font-main: 'Helvetica Neue', sans-serif;
+
+$footer-border-radius: 150px; //border radios footer
+
+
+
+// =============================================
+// 2. Variables de Componentes
+// =============================================
+
+// Header
+$header-bg: rgba(255, 255, 255, 0.85);
+$header-text: $color-text;
+
+// Footer
+$footer-bg: #3E1F0D;
+$footer-text: #D2F7F5;
+
+// Cards
+$card-bg: $color-background;
+$card-text: $color-text;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Botones
+$btn-primary-bg: $color-primary;
+$btn-primary-text: $color-text-light;
+$btn-secondary-bg: $color-secondary;
+$btn-secondary-text: $color-text-light;
+
+// =============================================
+// 3. Tipografía
+// =============================================
+
+$font-main: "Comfortaa", Arial, Helvetica, sans-serif;
+$font-title: "Roboto Condensed", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+// =============================================
+// 4. Espaciados y Tamaños
+// =============================================
+
+$spacing-unit: 1rem; // Unidad base (16px)
+$spacing-sm: $spacing-unit * 0.5; // 8px
+$spacing-md: $spacing-unit * 1.5; // 24px
+$spacing-lg: $spacing-unit * 2; // 32px
+$spacing-xl: $spacing-unit * 4; // 64px
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 50px;
+
+
+// =============================================
+// 5. Breakpoints Responsivos
+// =============================================
+
+$breakpoints: (
+  'mobile-small': 600px,
+  'mobile-large': 650px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1200px
+);
+
+// Definir las alturas del header por breakpoint
+$header-heights: (
+  'mobile-small': 60px,
+  'mobile-large': 70px,
+  'tablet': 80px,
+  'laptop': 90px,
+  'desktop': 110px
+);
+
+// =============================================
+// 6. Modo Noche (Dark Mode)
+// =============================================
+
+[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-text: #f0f0f0;
+  --color-primary: #8B5A3C;
+  --color-secondary: #3E2A1F;
+  --header-bg: rgba(26, 26, 26, 0.9);
+  --header-text: #f0f0f0;
+  --card-bg: #2d2d2d;
+  --card-text: #f0f0f0;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+// =============================================
+// 7. Links
+// =============================================
+
+$color-link: #3E1F0D;
+$color-link-hover: #f94306;

@@ -1,0 +1,83 @@
+
+@import '../base/variables';
+@import '../base/mixins';
+ 
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+
+  .filter-btn {
+    background: $color-primary;
+    color: $color-text-light;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: $border-radius-md;
+    font-family: $font-body;
+
+    &:hover {
+      background: $color-secondary;
+    }
+  }
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-md;
+  max-width: 1000px;
+  margin: auto;
+
+  .card {
+    background: $card-bg;
+    color: $card-text;
+    padding: $spacing-md;
+    border-radius: $border-radius-md;
+    position: relative;
+    overflow: hidden;
+    box-shadow: $card-shadow;
+    transition: transform 0.3s;
+
+    &::before {
+      content: 'Café';
+      position: absolute;
+      top: $spacing-sm;
+      left: $spacing-sm;
+      background: $color-secondary;
+      color: $color-text-light;
+      padding: $spacing-sm $spacing-sm;
+      border-radius: $border-radius-sm;
+      font-size: 0.75rem;
+      font-family: $font-body;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .card-image {
+      height: 150px;
+      background: url('../Img/haztumundo/card.jpg') center/cover no-repeat;
+      border-radius: $border-radius-md;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.title {
+  animation: fadeIn 1s ease-out;
+}

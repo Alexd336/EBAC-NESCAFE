@@ -1,0 +1,26 @@
+// 1. Fuentes externas (si las necesitas)
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+
+@import 'base/variables';       
+@import 'base/mixins';
+@import 'base/responsive';
+
+
+@import 'components/gallery';       
+@import 'components/heros';    
+@import 'components/recetas';      
+@import 'components/footer';  
+@import 'components/header';
+@import 'components/carrito';
+
+@import 'components/_product-card';
+@import 'components/_card';
+
+/* ============= SECCIONES ============= */
+@import 'sections/hero';
+@import 'sections/categories';
+@import 'sections/section3';
+@import 'sections/tendencias';
+@import 'sections/section5';
+
