@@ -14,6 +14,8 @@
     &:hover {
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
+
+    
   
     &__title {
       font-size: 1.2rem;
@@ -64,6 +66,29 @@
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
+        position: relative;
+
+        & .product-card__count-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #d62300;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            opacity: 0; /* Inicialmente oculto */
+            transition: opacity 0.3s ease;
+            
+            &.visible {
+                opacity: 1; /* Mostrar cuando hay items */
+            }
+        }
 
       &:hover{
         background: linear-gradient(to right, #d4ae91, $color-primary);
@@ -100,6 +125,22 @@
     }
   }
 
+  .product-card {
+    /* Tus estilos existentes... */
+    
+    &__cart-count {
+        font-size: 0.8rem;
+        color: #d62300;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        
+        &.visible {
+            opacity: 1;
+        }
+    }
+}
 
 
 

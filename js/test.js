@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartItemsContainer = document.getElementById('cartItems');
     const cartBadge = document.getElementById('cartBadge');
     const cartTotal = document.getElementById('cartTotal');
-    const cartItemCount = document.getElementById('cartItemCount');
     
     // Carrito en memoria
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -15,13 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar carrito
     updateCart();
     
-    // Eventos para abrir/cerrar carrito
-    openCartBtn.addEventListener('click', openCart);
-    closeCartBtn.addEventListener('click', closeCart);
-    cartOverlay.addEventListener('click', closeCart);
+    // Abrir carrito
+    openCartBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openCart();
+    });
     
-    // Delegación de eventos para los botones "Añadir al carrito"
+    // Cerrar carrito
+    closeCartBtn.addEventListener('click', closeCart);
+    
+    // Cerrar al hacer click fuera
+    cartOverlay.addEventListener('click', function(e) {
+        if (e.target === cartOverlay) {
+            closeCart();
+        }
+    });
+    
+    // Delegación de eventos
     document.addEventListener('click', function(e) {
+        // Añadir al carrito
         if (e.target.closest('.product-card__add-cart')) {
             const button = e.target.closest('.product-card__add-cart');
             addToCart(button);
@@ -45,47 +56,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Función para abrir el carrito
-    function openCart(e) {
-        e.preventDefault();
+    function openCart() {
         cartTray.classList.add('active');
-        cartOverlay.style.display = 'block';
+        cartOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
     
     // Función para cerrar el carrito
     function closeCart() {
         cartTray.classList.remove('active');
-        cartOverlay.style.display = 'none';
+        cartOverlay.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
     
     // Función para añadir producto al carrito
     function addToCart(button) {
-        const id = button.dataset.id || '1'; // Valor por defecto si no hay data-id
-        const name = button.closest('.product-card').querySelector('.product-card__title').textContent;
-        const priceText = button.closest('.product-card').querySelector('.product-card__description').nextElementSibling?.textContent || '5.99';
-        const price = parseFloat(priceText.replace('$', '')) || 5.99;
-        const image = button.dataset.image || button.closest('.product-card').querySelector('.product-card__image').src;
+        const id = button.dataset.id;
+        const name = button.dataset.name;
+        const price = parseFloat(button.dataset.price);
+        const image = button.dataset.image;
         
-        const product = {
-            id,
-            name,
-            price,
-            image,
-            quantity: 1
-        };
-        
-        // Verificar si el producto ya está en el carrito
         const existingItem = cart.find(item => item.id === id);
         
         if (existingItem) {
             existingItem.quantity += 1;
         } else {
-            cart.push(product);
+            cart.push({
+                id,
+                name,
+                price,
+                image,
+                quantity: 1
+            });
         }
         
         updateCart();
         animateAddToCart(button);
+        openCart();
     }
     
     // Función para actualizar el carrito
@@ -110,35 +117,73 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTotal();
     }
     
-    // Función para renderizar los items del carrito
-    function renderCartItems() {
-        if (cart.length === 0) {
-            cartItemsContainer.innerHTML = `
-                <div class="empty-cart-message">
-                    <i class="fas fa-shopping-cart"></i>
-                    <p>Tu carrito está vacío</p>
-                </div>
-            `;
-            return;
-        }
-        
-        cartItemsContainer.innerHTML = cart.map(item => `
-            <div class="cart-item" data-id="${item.id}">
-                <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                <div class="cart-item-details">
-                    <h4>${item.name}</h4>
-                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
-                    <div class="cart-item-controls">
-                        <button class="quantity-btn decrease">-</button>
-                        <span class="quantity">${item.quantity}</span>
-                        <button class="quantity-btn increase">+</button>
-                    </div>
-                </div>
-                <button class="remove-item">
-                    <i class="fas fa-trash"></i>
-                </button>
+    // Función para renderizar los items del carrito (CORREGIDA)
+   // Función para renderizar items del carrito (versión responsive)
+function renderCartItems() {
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+            <div class="empty-cart-message">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Tu carrito está vacío</p>
             </div>
-        `).join('');
+        `;
+        return;
+    }
+
+    // Agrupar productos
+    const groupedItems = cart.reduce((acc, item) => {
+        const existing = acc.find(i => i.id === item.id);
+        if (existing) existing.quantity += item.quantity;
+        else acc.push({...item});
+        return acc;
+    }, []);
+
+    cartItemsContainer.innerHTML = groupedItems.map(item => `
+        <div class="cart-item" data-id="${item.id}">
+            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+            <div class="cart-item-details">
+                <h4>${item.name} <span class="quantity-badge">${item.quantity}x</span></h4>
+                <div class="price-info">
+                    <span>$${item.price.toFixed(2)} c/u</span>
+                    <strong>Total: $${(item.price * item.quantity).toFixed(2)}</strong>
+                </div>
+                <div class="quantity-controls">
+                    <button class="quantity-btn decrease">-</button>
+                    <span class="quantity">${item.quantity}</span>
+                    <button class="quantity-btn increase">+</button>
+                </div>
+            </div>
+            <button class="remove-item" aria-label="Eliminar">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+    `).join('');
+    
+    setupCartControls();
+}
+    
+    // Función para configurar los controles de cantidad
+    function setupCartControls() {
+        document.querySelectorAll('.decrease').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const itemId = this.closest('.cart-item').dataset.id;
+                updateItemQuantity(itemId, -1);
+            });
+        });
+        
+        document.querySelectorAll('.increase').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const itemId = this.closest('.cart-item').dataset.id;
+                updateItemQuantity(itemId, 1);
+            });
+        });
+        
+        document.querySelectorAll('.remove-item').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const itemId = this.closest('.cart-item').dataset.id;
+                removeItem(itemId);
+            });
+        });
     }
     
     // Función para actualizar cantidad de un item
