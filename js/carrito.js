@@ -179,3 +179,34 @@ function animateAddToCart(button) {
         cartBadge.classList.remove('bounce');
     }, 300);
 }
+
+
+
+
+// Mejora: Script para mejorar accesibilidad dinámica 
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            // Manejar el foco para elementos interactivos
+            const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
+            
+            interactiveElements.forEach(el => {
+                el.addEventListener('focus', function() {
+                    this.style.outline = '2px solid #0066cc';
+                    this.style.outlineOffset = '2px';
+                });
+                
+                el.addEventListener('blur', function() {
+                    this.style.outline = 'none';
+                });
+            });
+            
+            // Manejar el botón de saltar al contenido
+            const skipLink = document.querySelector('.skip-link');
+            const mainContent = document.getElementById('main-content');
+            
+            skipLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                mainContent.setAttribute('tabindex', '-1');
+                mainContent.focus();
+            });
+        });

@@ -11,9 +11,12 @@
 </head>
 <body class="center-p">
 
-    <main>
-    <header id="header">
-        <div class="header-content">
+    <!-- Enlace para saltar al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <main id="main-content" role="main">
+
+    <header id="header" role="banner">
+        <div class="header-content" aria-label="Página de inicio de NESCAFÉ">
             <a href="Index.html">
                 <svg width="150" height="107" viewBox="0 0 397 107" fill="none">
                     <path fill="url(#a)" d="M0 0h397v107H0z"></path>
@@ -26,14 +29,14 @@
                 </svg>
             </a>
         </div>
-        <nav>
-            <ul>
-              <li><a href="Products.html">Nuestros cafés</a></li>
-              <li><a href="Products.html">Recetas</a></li>
-              <li><a href="sustentabilidad.html">Sustentabilidad</a></li>
+        <nav aria-label="Navegación principal">
+            <ul role="menubar">
+              <li role="none"><a href="Products.html">Nuestros cafés</a></li>
+              <li role="none"><a href="Products.html">Recetas</a></li>
+              <li role="none"><a href="sustentabilidad.html">Sustentabilidad</a></li>
             </ul>
         </nav>
-        <div class="search-cart">
+        <div class="search-cart" role="search">
             <a href="#">
             <img src="Img/Buscar.svg" alt="Buscar">
             </a>
@@ -49,7 +52,7 @@
         </div>
     </header>
 
-   <section class="product-topbar">
+<section class="product-topbar">
   <div class="product-topbar__logo">
     <img src="Img/productos/sec2.jpg" alt="Nescafé Taster's Choice">
   </div>
@@ -63,7 +66,7 @@
   <span class="product-count">9 productos</span>
 </section>
 
-<div class="product-toolbar">
+<div class="product-toolbar" >
     <button   class="toolbar-icon" aria-label="Filtros">
         <i  class="fa-solid fa-sliders"></i>
     </button>
@@ -322,41 +325,44 @@
   
 
 <!-- Footer -->
-<footer class="footer">
-  <div class="footer-grid">
+<footer class="footer" role="contentinfo">
+    <div class="footer-grid">
     <!-- Columna 1: Ubicación y Contacto -->
-    <div class="footer-location">
-      <div class="location-content">
-        <i class="fas fa-map-marker-alt"></i>
+    <div class="footer-location" aria-labelledby="location-heading">
+        <h3 id="location-heading" class="visually-hidden">Información de contacto</h3>
+    <div class="location-content">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
         <p>Ubicación</p>
-        <a href="mailto:contacto@nescafe.com">
-          <i class="fas fa-envelope"></i> Contáctanos
+        <a href="mailto:contacto@nescafe.com" aria-label="Enviar correo electrónico a NESCAFÉ">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Contáctanos
         </a>
-      </div>
+    </div>
     </div>
     
     <!-- Columna 2: Términos y políticas -->
-    <div class="footer-links">
-      <ul>
-        <li><a href="#"><i class="fas fa-file-contract"></i> Términos y Condiciones</a></li>
-        <li><a href="#"><i class="fas fa-lock"></i> Política de Privacidad</a></li>
-        <li><a href="#"><i class="fas fa-cookie-bite"></i> Nuestra Política de Cookies</a></li>
-      </ul>
+    <div class="footer-links"  aria-labelledby="legal-heading">
+        <h3 id="legal-heading" class="visually-hidden">Información legal</h3>
+    <ul>
+        <li><a href="#"  aria-label="Leer términos y condiciones" aria-hidden="true"><i class="fas fa-file-contract"></i> Términos y Condiciones</a></li>
+        <li><a href="#" aria-label="Leer política de privacidad" aria-hidden="true"><i class="fas fa-lock"></i> Política de Privacidad</a></li>
+        <li><a href="#" aria-label="Leer política de cookies" aria-hidden="true"><i class="fas fa-cookie-bite"></i> Nuestra Política de Cookies</a></li>
+    </ul>
     </div>
     
     <!-- Columna 3: Mapa del sitio y enlaces -->
-    <div class="footer-links">
-      <ul>
-        <li><a href="#"><i class="fas fa-sitemap"></i> Mapa del Sitio Web</a></li>
-        <li><a href="#"><i class="fas fa-coffee"></i> Visita NESCAFÉ</a></li>
-      </ul>
+    <div class="footer-links" aria-labelledby="site-links-heading">
+        <h3 id="site-links-heading" class="visually-hidden">Enlaces del sitio</h3>
+    <ul>
+        <li><a href="#" aria-label="Ver mapa del sitio web" aria-hidden="true"><i class="fas fa-sitemap"></i> Mapa del Sitio Web</a></li>
+        <li><a href="#" aria-label="Visitar sitio web oficial de NESCAFÉ" aria-hidden="true><i class="fas fa-coffee"></i> Visita NESCAFÉ</a></li>
+    </ul>
     </div>
     
     <!-- Copyright -->
     <div class="footer-copyright">
-      © 2024 Reservados todos los derechos
+    © 2024 Reservados todos los derechos
     </div>
-  </div>
+</div>
 </footer>
     
 
