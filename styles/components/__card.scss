@@ -1,0 +1,139 @@
+.product-topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+
+    &.__logo img {
+
+    max-width: 200px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+    &.__nav {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+    &__btn {
+
+    background: linear-gradient(to bottom, #a86735, #5e2d0c);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to bottom, #d6b297, #774320);
+    }
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  
+    
+}
+}
+
+
+.product-toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #333;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 1rem 0;
+    padding: 1rem;
+    position: relative;
+    border-radius: 10%;
+
+    @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    }
+}
+
+.toolbar-icon {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    left: 1rem;
+
+    .fa-sliders {
+        font-size: 24px;
+        color: #333;
+        transition: all 0.3s ease;
+    }
+    
+    &:hover {
+    transform: scale(1.1);
+
+    .fa-sliders {
+        color: #5e2d0c;
+        transform: scale(1.1);
+    }
+    
+    svg path {
+        fill: #5e2d0c; /* Color café al hover */
+    }
+    }
+}
+    
+.product-count {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+.sort-label {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.sort-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+
+    border-color: #a0a0a0;
+    }
+
+    &:focus {
+
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+}
