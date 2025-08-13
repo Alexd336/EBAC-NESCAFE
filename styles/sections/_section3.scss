@@ -9,7 +9,11 @@
   display: grid;
   place-items: center;
   height: 100vh;
+<<<<<<< HEAD
   background: url('../Img/haztumundo/sect1.jpg') no-repeat center center/cover;
+=======
+  background: url('../Img/haztumundo/sect1.webp') no-repeat center center/cover;
+>>>>>>> origin/seo-accesibilidad
 
   .hero-overlay {
     position: absolute;
@@ -50,11 +54,19 @@
 }
 
 .hero-img2 {
+<<<<<<< HEAD
   background: url('../Img/haztumundo/sect2.jpg') no-repeat center center/cover;
 }
 
 .hero-img3 {
   background: url('../Img/haztumundo/sect3.jpg') no-repeat center center/cover;
+=======
+  background: url('../Img/haztumundo/sect2.webp') no-repeat center center/cover;
+}
+
+.hero-img3 {
+  background: url('../Img/haztumundo/sect3.webp') no-repeat center center/cover;
+>>>>>>> origin/seo-accesibilidad
 }
 
 @keyframes fadeIn {
