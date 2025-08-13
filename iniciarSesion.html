@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -200,11 +201,73 @@
 
         <!-- Botón real de envío (sin <a> dentro) -->
         <button type="submit" class="login__btn" aria-label="Iniciar sesión en NESCAFÉ">Iniciar sesión</button>
+=======
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Iniciar sesión - NESCAFÉ®</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Accede a tu cuenta NESCAFÉ® con tu correo y contraseña." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="register-background">
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Header del login (solo uno) -->
+  <header class="login__header" role="banner">
+    <button type="button" class="login__back" aria-label="Volver" id="btn-back">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 18L9 12L15 6" stroke="#4B2E2E" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <nav class="login__tabs" aria-label="Pestañas de autenticación" role="navigation">
+      <ul class="login__tabs-list" role="tablist">
+        <li role="presentation">
+          <a href="iniciarSesion.html" role="tab" aria-selected="true" class="login__tab login__tab--active">Iniciar sesión</a>
+        </li>
+        <li role="presentation">
+          <a href="registrarse.html" role="tab" aria-selected="false" class="login__tab">Registrarse</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section class="login" aria-labelledby="login-title">
+      <div class="login__container">
+        <h1 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h1>
+        <p class="login__subtitle">Prometemos enviarte solo correos con buen sabor y cero spam.</p>
+
+        <form class="login__form" action="#" method="post">
+          <label for="email" class="login__label">Correo electrónico</label>
+          <input type="email" id="email" name="email" class="login__input"
+                 placeholder="tu@correo.com" autocomplete="email" required />
+
+          <label for="password" class="login__label">Contraseña</label>
+          <input type="password" id="password" name="password" class="login__input"
+                 placeholder="••••••••" minlength="8" autocomplete="current-password" required />
+
+          <div class="login__options">
+            <label class="login__remember">
+              <input type="checkbox" name="remember" /> Recuérdame
+            </label>
+            <a href="#" class="login__forgot">¿Olvidaste tus datos?</a>
+          </div>
+
+          <button type="submit" class="login__btn">Iniciar sesión</button>
+>>>>>>> mejoras
         </form>
 
         <div class="login__divider" role="separator" aria-label="Otras opciones">o también</div>
 
         <div class="login__socials" role="group" aria-label="Iniciar con redes sociales">
+<<<<<<< HEAD
         <a href="#" class="login__social login__social--facebook" aria-label="Iniciar sesión con Facebook" rel="nofollow noopener">f</a>
         <a href="#" class="login__social login__social--google" aria-label="Iniciar sesión con Google" rel="nofollow noopener">G</a>
         </div>
@@ -220,3 +283,18 @@
 </body>
 </html>
 >>>>>>> origin/seo-accesibilidad
+=======
+          <a href="#" class="login__social login__social--facebook" aria-label="Facebook">f</a>
+          <a href="#" class="login__social login__social--google" aria-label="Google">G</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const backBtn = document.getElementById('btn-back');
+    if (backBtn) backBtn.addEventListener('click', () => history.back());
+  </script>
+</body>
+</html>
+>>>>>>> mejoras

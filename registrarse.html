@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -133,12 +134,58 @@
 <main>
     <section class="login">
     <div class="login__container" aria-labelledby="register-title">
+=======
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrarse – NESCAFÉ®</title>
+
+  <!-- SEO: pantallas de auth no se indexan -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Crea tu cuenta NESCAFÉ® para guardar tus preferencias y comprar más rápido." />
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <script defer>
+    // Back button
+    document.addEventListener('DOMContentLoaded', () => {
+      const backBtn = document.querySelector('.login__back');
+      if (backBtn) backBtn.addEventListener('click', () => history.back());
+    });
+  </script>
+</head>
+<body class="register-background">
+  <!-- Cabecera con flecha y pestañas -->
+  <header class="login__header" aria-label="Navegación de autenticación">
+    <!-- Botón de retroceso -->
+    <button class="login__back" type="button" aria-label="Volver">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="#4B2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <!-- Pestañas -->
+    <nav class="login__tabs" aria-label="Pestañas de autenticación" role="tablist">
+      <a href="registrarse.html" class="login__tab login__tab--active" role="tab" aria-current="page" tabindex="0">Registrarse</a>
+      <a href="iniciarSesion.html" class="login__tab" role="tab" tabindex="-1">Iniciar sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="login">
+      <div class="login__container" role="form" aria-labelledby="register-title">
+>>>>>>> mejoras
         <h1 class="login__title" id="register-title">Crea tu cuenta NESCAFÉ®</h1>
         <p class="login__subtitle">Recibe novedades y guarda tus preferencias. Puedes darte de baja cuando quieras.</p>
 
         <form class="login__form" action="#" method="post" novalidate>
+<<<<<<< HEAD
         <label for="nombre" class="login__label">Nombre</label>
         <input
+=======
+          <label for="nombre" class="login__label">Nombre</label>
+          <input
+>>>>>>> mejoras
             type="text"
             id="nombre"
             name="first_name"
@@ -146,10 +193,17 @@
             placeholder="Introduce tu nombre"
             autocomplete="given-name"
             required
+<<<<<<< HEAD
         />
 
         <label for="apellido" class="login__label">Apellido</label>
         <input
+=======
+          />
+
+          <label for="apellido" class="login__label">Apellido</label>
+          <input
+>>>>>>> mejoras
             type="text"
             id="apellido"
             name="last_name"
@@ -157,19 +211,33 @@
             placeholder="Introduce tu apellido"
             autocomplete="family-name"
             required
+<<<<<<< HEAD
         />
 
         <label for="fecha" class="login__label">Fecha de nacimiento</label>
         <input
+=======
+          />
+
+          <label for="fecha" class="login__label">Fecha de nacimiento</label>
+          <input
+>>>>>>> mejoras
             type="date"
             id="fecha"
             name="birthdate"
             class="login__input"
             autocomplete="bday"
+<<<<<<< HEAD
         />
 
         <label for="email" class="login__label">Correo electrónico</label>
         <input
+=======
+          />
+
+          <label for="email" class="login__label">Correo electrónico</label>
+          <input
+>>>>>>> mejoras
             type="email"
             id="email"
             name="email"
@@ -177,10 +245,17 @@
             placeholder="Introduce tu correo electrónico"
             autocomplete="email"
             required
+<<<<<<< HEAD
         />
 
         <label for="password" class="login__label">Contraseña</label>
         <input
+=======
+          />
+
+          <label for="password" class="login__label">Contraseña</label>
+          <input
+>>>>>>> mejoras
             type="password"
             id="password"
             name="password"
@@ -190,6 +265,7 @@
             minlength="8"
             required
             aria-describedby="password-help"
+<<<<<<< HEAD
         />
         <small id="password-help" class="login__help">Usa al menos 8 caracteres; combina letras y números.</small>
 
@@ -206,10 +282,29 @@
         <p class="login__alt">
             ¿Ya tienes cuenta? <a href="iniciarSesion.html">Inicia sesión</a>
         </p>
+=======
+          />
+          <small id="password-help" class="login__help">Usa al menos 8 caracteres; combina letras y números.</small>
+
+          <div class="login__options">
+            <label class="login__remember">
+              <input type="checkbox" name="terms" required />
+              Acepto los <a href="#" target="_blank" rel="noopener">términos y condiciones</a> y la
+              <a href="#" target="_blank" rel="noopener">política de privacidad</a>.
+            </label>
+          </div>
+
+          <button type="submit" class="login__btn">Registrarse</button>
+
+          <p class="login__alt">
+            ¿Ya tienes cuenta? <a href="iniciarSesion.html">Inicia sesión</a>
+          </p>
+>>>>>>> mejoras
         </form>
 
         <div class="login__divider" role="separator" aria-label="o también">o también</div>
 
+<<<<<<< HEAD
         <div class="login__socials">
         <button type="button" class="login__social login__social--facebook" aria-label="Registrarse con Facebook">f</button>
         <button type="button" class="login__social login__social--google" aria-label="Registrarse con Google">G</button>
@@ -222,3 +317,14 @@
 </body>
 </html>
 >>>>>>> origin/seo-accesibilidad
+=======
+        <div class="login__socials" role="group" aria-label="Registrarse con redes sociales">
+          <button type="button" class="login__social login__social--facebook" aria-label="Registrarse con Facebook">f</button>
+          <button type="button" class="login__social login__social--google" aria-label="Registrarse con Google">G</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+>>>>>>> mejoras
