@@ -614,6 +614,7 @@ body.night-mode .hero-sections {
 }
 body.night-mode .details span, body.night-mode .info-section {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #150e0a;
 }
 body.night-mode a {
@@ -622,6 +623,8 @@ body.night-mode a {
 body.night-mode a:hover {
   color: #fb8e6a;
 =======
+=======
+>>>>>>> mejoras
   background-color: rgb(20.977443609, 14.2180451128, 10.022556391);
 }
 body.night-mode a {
@@ -629,7 +632,10 @@ body.night-mode a {
 }
 body.night-mode a:hover {
   color: rgb(251.4, 142.2, 105.6);
+<<<<<<< HEAD
 >>>>>>> origin/seo-accesibilidad
+=======
+>>>>>>> mejoras
 }
 
 .guia-nescafe {
@@ -705,10 +711,14 @@ body.night-mode .contenido-guia {
 }
 body.night-mode .opcion-cafe {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: rgba(179, 179, 179, 0.2);
 =======
   background-color: rgba(178.5, 178.5, 178.5, 0.2);
 >>>>>>> origin/seo-accesibilidad
+=======
+  background-color: rgba(178.5, 178.5, 178.5, 0.2);
+>>>>>>> mejoras
 }
 
 .recetas {
@@ -810,16 +820,22 @@ body.night-mode {
 }
 body.night-mode .receta {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: #3c3b3b;
 }
 body.night-mode .etiqueta, body.night-mode .btn-recetas {
   background: #541515;
 =======
+=======
+>>>>>>> mejoras
   background: rgb(60.3076923077, 58.6923076923, 58.6923076923);
 }
 body.night-mode .etiqueta, body.night-mode .btn-recetas {
   background: rgb(83.6956521739, 21.3043478261, 21.3043478261);
+<<<<<<< HEAD
 >>>>>>> origin/seo-accesibilidad
+=======
+>>>>>>> mejoras
 }
 
 .coffee-value-chain {
@@ -1841,10 +1857,14 @@ body {
 }
 .login__back:hover svg {
 <<<<<<< HEAD
+<<<<<<< HEAD
   stroke: #2b1b1b;
 =======
   stroke: rgb(43.3884297521, 26.6115702479, 26.6115702479);
 >>>>>>> origin/seo-accesibilidad
+=======
+  stroke: rgb(43.3884297521, 26.6115702479, 26.6115702479);
+>>>>>>> mejoras
 }
 .login__back:focus {
   outline: 2px solid #7c3f1c;
@@ -2345,10 +2365,14 @@ body {
 .articles .card .card-image {
   height: 150px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: url("../Img/haztumundo/card.jpg") center/cover no-repeat;
 =======
   background: url("../Img/haztumundo/card.webp") center/cover no-repeat;
 >>>>>>> origin/seo-accesibilidad
+=======
+  background: url("../Img/haztumundo/card.webp") center/cover no-repeat;
+>>>>>>> mejoras
   border-radius: 8px;
 }
 
@@ -2439,10 +2463,14 @@ body {
   place-items: center;
   height: 100vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: url("../Img/haztumundo/sect1.jpg") no-repeat center center/cover;
 =======
   background: url("../Img/haztumundo/sect1.webp") no-repeat center center/cover;
 >>>>>>> origin/seo-accesibilidad
+=======
+  background: url("../Img/haztumundo/sect1.webp") no-repeat center center/cover;
+>>>>>>> mejoras
 }
 .hero-img .hero-overlay,
 .hero-img2 .hero-overlay,
@@ -2489,18 +2517,24 @@ body {
 
 .hero-img2 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: url("../Img/haztumundo/sect2.jpg") no-repeat center center/cover;
 }
 
 .hero-img3 {
   background: url("../Img/haztumundo/sect3.jpg") no-repeat center center/cover;
 =======
+=======
+>>>>>>> mejoras
   background: url("../Img/haztumundo/sect2.webp") no-repeat center center/cover;
 }
 
 .hero-img3 {
   background: url("../Img/haztumundo/sect3.webp") no-repeat center center/cover;
+<<<<<<< HEAD
 >>>>>>> origin/seo-accesibilidad
+=======
+>>>>>>> mejoras
 }
 
 @keyframes fadeIn {
