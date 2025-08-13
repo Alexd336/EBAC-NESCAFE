@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos - NESCAFÉ®</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Descubre nuestros cafés NESCAFÉ®: variedades, formatos y máquinas. Compra online y añade tus favoritos al carrito." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tu-dominio/Products.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Productos - NESCAFÉ®" />
+  <meta property="og:description" content="Explora y compra las mejores variedades de NESCAFÉ®." />
+  <meta property="og:url" content="https://tu-dominio/Products.html" />
+  <meta property="og:image" content="Img/productos/sec2.webp" />
+  <meta property="og:site_name" content="NESCAFÉ®" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="js/test.js" defer></script>
+</head>
+<body class="center-p">
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <main id="main-content" role="main">
+    <header id="header" role="banner">
+      <div class="header-content" aria-label="Página de inicio de NESCAFÉ">
+        <a href="Index.html" aria-label="Ir al inicio">
+          <img src="Img/logo_NESCAFE.png" alt="NESCAFÉ" width="150" height="48" />
+        </a>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <ul class="main-nav">
+          <li><a href="Products.html">Nuestros cafés</a></li>
+          <li><a href="Products.html">Recetas</a></li>
+          <li><a href="sustentabilidad.html">Sustentabilidad</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-cart">
+        <a href="#" aria-label="Buscar">
+          <img src="Img/Buscar.svg" alt="" />
+        </a>
+
+        <a href="#" aria-label="Más opciones">
+          <img class="options" src="Img/opciones.svg" alt="" />
+        </a>
+
+        <a href="#" class="cart-icon-container" id="openCartBtn" aria-label="Abrir carrito">
+          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+          <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
+        </a>
+      </div>
+    </header>
+
+    <section class="product-topbar" aria-label="Encabezado de listado de productos">
+      <div class="product-topbar__logo">
+        <img src="Img/productos/sec2.webp" alt="Colección de productos NESCAFÉ" />
+      </div>
+
+      <nav class="product-topbar__nav" aria-label="Filtros rápidos">
+        <button type="button" class="product-topbar__btn">Variedades de café</button>
+        <button type="button" class="product-topbar__btn">Formatos de café</button>
+        <button type="button" class="product-topbar__btn">Máquinas de café</button>
+        <button type="button" class="product-topbar__btn">Nuestros rangos</button>
+      </nav>
+
+      <span class="product-count" aria-live="polite">9 productos</span>
+    </section>
+
+    <div class="product-toolbar">
+      <button type="button" class="toolbar-icon" aria-label="Abrir filtros">
+        <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+      </button>
+
+      <div class="sort-options">
+        <label for="sortSelect" class="sort-label">Ordenar por:</label>
+        <select id="sortSelect" class="sort-select" aria-label="Ordenar productos">
+          <option value="recommended">Más recomendados</option>
+          <!-- añade más opciones si tu JS las soporta -->
+        </select>
+      </div>
+    </div>
+
+    <!-- Overlay único -->
+    <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+    <!-- Bandeja del carrito -->
+    <aside class="cart-tray" id="cartTray" aria-labelledby="cartTitle" aria-modal="true" role="dialog" hidden>
+      <div class="cart-header">
+        <h3 id="cartTitle">Tu carrito <span id="cartItemCount">(0)</span></h3>
+        <button type="button" id="closeCartBtn" aria-label="Cerrar carrito">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItems" aria-live="polite">
+        <!-- Productos dinámicos -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal" aria-live="polite">$0.00</span>
+        </div>
+        <button type="button" class="checkout-btn">Proceder al pago</button>
+      </div>
+    </aside>
+
+    <section class="lista-productos" aria-label="Listado de productos">
+      <!-- 1 -->
+      <article class="product-card" data-id="1">
+        <h3 class="product-card__title">Cappuccino</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto1.webp" alt="Cappuccino NESCAFÉ DOLCE GUSTO" />
+        </div>
+
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="1"
+            data-name="Cappuccino"
+            data-price="5.99"
+            data-image="Img/productos/producto1.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Cappuccino al carrito</span>
+            <span class="product-card__count-badge" data-id="1" aria-hidden="true">0</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Cappuccino a comparar">+</button>
+        </div>
+
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 2 -->
+      <article class="product-card" data-id="2">
+        <h3 class="product-card__title">Caramel Dark Chocolate</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto2.webp" alt="Caramel Dark Chocolate NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="2"
+            data-name="Caramel Dark Chocolate"
+            data-price="5.99"
+            data-image="Img/productos/producto2.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Caramel Dark Chocolate al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Caramel Dark Chocolate a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 3 -->
+      <article class="product-card" data-id="3">
+        <h3 class="product-card__title">Cappuccino</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto3.webp" alt="Cappuccino NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="3"
+            data-name="Cappuccino"
+            data-price="5.99"
+            data-image="Img/productos/producto3.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Cappuccino al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Cappuccino a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 4 -->
+      <article class="product-card" data-id="4">
+        <h3 class="product-card__title">Cappuccino</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto4.webp" alt="Cappuccino NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="4"
+            data-name="Cappuccino"
+            data-price="5.99"
+            data-image="Img/productos/producto4.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Cappuccino al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Cappuccino a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 5 -->
+      <article class="product-card" data-id="5">
+        <h3 class="product-card__title">Cappuccino</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto5.webp" alt="Cappuccino NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="5"
+            data-name="Cappuccino"
+            data-price="5.99"
+            data-image="Img/productos/producto5.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Cappuccino al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Cappuccino a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 6 -->
+      <article class="product-card" data-id="6">
+        <h3 class="product-card__title">Caramel Dark Chocolate</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto6.webp" alt="Caramel Dark Chocolate NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Extra cremoso</p>
+        <p class="product-card__price" data-price="5.99">$5.99</p>
+        <div class="product-card__actions">
+          <button
+            type="button"
+            class="product-card__add-cart"
+            data-id="6"
+            data-name="Caramel Dark Chocolate"
+            data-price="5.99"
+            data-image="Img/productos/producto6.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Caramel Dark Chocolate al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Caramel Dark Chocolate a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 7 -->
+      <article class="product-card" data-id="7">
+        <h3 class="product-card__title">Latte Macchiato</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto3.webp" alt="Latte Macchiato NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Suave y espumoso</p>
+        <p class="product-card__price" data-price="6.49">$6.49</p>
+        <div class="product-card__actions">
+          <button type="button" class="product-card__add-cart" data-id="7" data-name="Latte Macchiato" data-price="6.49" data-image="Img/productos/producto3.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Latte Macchiato al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Latte Macchiato a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 8 -->
+      <article class="product-card" data-id="8">
+        <h3 class="product-card__title">Mocha</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto4.webp" alt="Mocha NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Chocolateado y aromático</p>
+        <p class="product-card__price" data-price="6.99">$6.99</p>
+        <div class="product-card__actions">
+          <button type="button" class="product-card__add-cart" data-id="8" data-name="Mocha" data-price="6.99" data-image="Img/productos/producto4.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Mocha al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Mocha a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+
+      <!-- 9 -->
+      <article class="product-card" data-id="9">
+        <h3 class="product-card__title">Americano</h3>
+        <p class="product-card__brand">NESCAFÉ® DOLCE GUSTO®</p>
+        <div class="product-card__image-wrapper">
+          <img class="product-card__image" src="Img/productos/producto5.webp" alt="Americano NESCAFÉ DOLCE GUSTO" />
+        </div>
+        <p class="product-card__description">Intenso y equilibrado</p>
+        <p class="product-card__price" data-price="4.99">$4.99</p>
+        <div class="product-card__actions">
+          <button type="button" class="product-card__add-cart" data-id="9" data-name="Americano" data-price="4.99" data-image="Img/productos/producto5.webp">
+            Añadir al carrito
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="visually-hidden">Añadir Americano al carrito</span>
+          </button>
+          <button type="button" class="product-card__compare" aria-pressed="false" aria-label="Añadir Americano a comparar">+</button>
+        </div>
+        <p class="product-card__compare-text">Añadir para comparar</p>
+      </article>
+    </section>
+
+    <img class="footer-logo" src="Img/logo_NESCAFE.png" alt="Logotipo de NESCAFÉ" />
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-grid">
+        <div class="footer-location" aria-labelledby="location-heading">
+          <h3 id="location-heading" class="visually-hidden">Información de contacto</h3>
+          <div class="location-content">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <p>Ubicación</p>
+            <a href="mailto:contacto@nescafe.com" aria-label="Enviar correo electrónico a NESCAFÉ">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Contáctanos
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links" aria-labelledby="legal-heading">
+          <h3 id="legal-heading" class="visually-hidden">Información legal</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-file-contract" aria-hidden="true"></i> Términos y Condiciones</a></li>
+            <li><a href="#"><i class="fas fa-lock" aria-hidden="true"></i> Política de Privacidad</a></li>
+            <li><a href="#"><i class="fas fa-cookie-bite" aria-hidden="true"></i> Nuestra Política de Cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links" aria-labelledby="site-links-heading">
+          <h3 id="site-links-heading" class="visually-hidden">Enlaces del sitio</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-sitemap" aria-hidden="true"></i> Mapa del sitio web</a></li>
+            <li><a href="#"><i class="fas fa-coffee" aria-hidden="true"></i> Visita NESCAFÉ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-copyright">© 2024 Reservados todos los derechos</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://kit.fontawesome.com/952235d348.js" crossorigin="anonymous"></script>
+</body>
+</html>
