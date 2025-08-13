@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iniciar sesión - NESCAFÉ®</title>
+<!-- SEO -->
+<meta name="description" content="Accede a tu cuenta NESCAFÉ® con tu correo y contraseña y gestiona tus preferencias.">
+<meta name="keywords" content="iniciar sesión,login,cuenta nescafé,café">
+<meta name="robots" content="noindex, nofollow">
+<!-- Open Graph -->
+<meta property="og:locale" content="es_MX">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iniciar sesión - NESCAFÉ®">
+<meta property="og:description" content="Inicia sesión en tu cuenta NESCAFÉ® y gestiona tus preferencias.">
+<meta property="og:url" content="https://tu-dominio/iniciarSesion.html">
+<meta property="og:image" content="images/login-hero.jpg">
+<meta property="og:site_name" content="NESCAFÉ®">
+<link rel="canonical" href="https://tu-dominio/iniciarSesion.html">
+<link rel="stylesheet" href="styles/main.css">
+<script src="js/login.js" defer></script>
+</head>
+<body class="register-background">
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+
+<header class="login__header" role="banner">
+
+    
+    <button type="button" class="login__back" aria-label="Volver a la página anterior" id="btn-back">
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+
+        aria-hidden="true"
+      >
+        <path
+          d="M15 18L9 12L15 6"
+          stroke="#4B2E2E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    <script>
+        const backButton = document.querySelector('.login__header');
+        if (backButton) {
+        backButton.addEventListener('click', () => {
+        window.history.back();
+    });
+ }
+</script>
+    </button>
+
+    <!-- Pestañas “Iniciar sesión” y “Registrarse” -->
+    <nav class="login__tabs" aria-label="Tabs de autenticación">
+        <!-- La primera pestaña está activa -->
+         <a href="iniciarSesion.html" class="login__tab login__tab--active">Iniciar sesión</a>
+        <a href="registrarse.html"  class="login__tab">Registrarse</a>
+        
+    
+    </nav>
+</header>
+
+    <main>
+        <section class="login">
+<div class="login__container" role="form" aria-labelledby="login-title">
+    <h2 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h2>
+    <p class="login__subtitle">Te prometemos que amarás cada correo electrónico que te enviemos.</p>
+
+    <form class="login__form">
+        <label for="email" class="login__label">Correo electrónico</label>
+        <input type="email" id="email" class="login__input" placeholder="Introducir nombre completo" required />
+
+        <label for="password" class="login__label">Contraseña</label>
+        <input type="password" id="password" class="login__input" placeholder="Introducir nombre completo" required />
+
+    <div class="login__options">
+        <label class="login__remember">
+        <input type="checkbox" /> Recuérdame
+        </label>
+        <a href="#" class="login__forgot">¿Perdiste u olvidaste tus datos?</a>
+    </div>
+
+        <button type="submit" class="login__btn"><a href="Products.html">Iniciar sesión</a></button>
+    </form>
+
+    <div class="login__divider">o también</div>
+
+    <div class="login__socials">
+        <a href="#" class="login__social login__social--facebook" aria-label="Iniciar con Facebook">f</a>
+        <a href="#" class="login__social login__social--google" aria-label="Iniciar con Google">G</a>
+    </div>
+    </div>
+</section>
+
+    </main>
+</body>
+</html>
+
+        aria-hidden="true">
+        <path
+        d="M15 18L9 12L15 6"
+        stroke="#4B2E2E"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        />
+    </svg>
+    </button>
+
+    <!-- Tabs de autenticación -->
+    <nav class="login__tabs" aria-label="Pestañas de autenticación" role="navigation">
+        <ul class="login__tabs-list" role="tablist">
+        <li role="presentation">
+            <a href="iniciarSesion.html" role="tab" aria-selected="true" tabindex="0" class="login__tab login__tab--active">Iniciar sesión</a>
+        </li>
+        <li role="presentation">
+            <a href="registrarse.html" role="tab" aria-selected="false" tabindex="-1" class="login__tab">Registrarse</a>
+        </li>
+        </ul>
+    </nav>
+
+</header>
+
+<main id="main" role="main">
+    <section class="login" aria-labelledby="login-title">
+    <div class="login__container">
+        
+        <h1 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h1>
+        <p class="login__subtitle">Prometemos enviarte solo correos con buen sabor y cero spam.</p>
+
+        
+        <div id="form-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+        
+        <form class="login__form" action="#" method="post" aria-describedby="login-help">
+        <p id="login-help" class="visually-hidden">Ingresa tu correo y contraseña para acceder a tu cuenta.</p>
+
+        <label for="email" class="login__label">Correo electrónico</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            class="login__input"
+            placeholder="tu@correo.com"
+            inputmode="email"
+            autocomplete="email"
+            required
+            aria-required="true">
+
+        <label for="password" class="login__label">Contraseña</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            class="login__input"
+            placeholder="••••••••"
+            minlength="8"
+            autocomplete="current-password"
+            required
+            aria-required="true">
+
+        <div class="login__options">
+            <label class="login__remember">
+            <input type="checkbox" name="remember" id="remember" autocomplete="on">
+            Recuérdame
+            </label>
+
+            <a href="#" class="login__forgot" rel="nofollow">¿Olvidaste tus datos?</a>
+        </div>
+
+        
+        <button type="submit" class="login__btn" aria-label="Iniciar sesión en NESCAFÉ">Iniciar sesión</button>
+        </form>
+
+        <div class="login__divider" role="separator" aria-label="Otras opciones">o también</div>
+
+        <div class="login__socials" role="group" aria-label="Iniciar con redes sociales">
+        <a href="#" class="login__social login__social--facebook" aria-label="Iniciar sesión con Facebook" rel="nofollow noopener">f</a>
+        <a href="#" class="login__social login__social--google" aria-label="Iniciar sesión con Google" rel="nofollow noopener">G</a>
+        </div>
+    </div>
+    </section>
+</main>
+
+<noscript>
+    <p>Para una mejor experiencia, habilita JavaScript en tu navegador.</p>
+</noscript>
+
+
+</body>
+</html>
+

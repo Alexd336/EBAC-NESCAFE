@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body class="register-background">
+
+    
+        <!-- CABECERA CON FLECHA Y PESTAÑAS -->
+    <header class="login__header"  role="navigation" aria-label="Navegación de autenticación">
+    <!-- Botón de retroceso -->
+    <button class="login__back" aria-label="Volver" >
+        <a href="index.html"></a>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M15 18L9 12L15 6"
+          stroke="#4B2E2E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    <script>
+        const backButton = document.querySelector('.login__header');
+        if (backButton) {
+        backButton.addEventListener('click', () => {
+        window.history.back();
+    });
+}
+</script>
+    </button>
+
+    <!-- Pestañas “Iniciar sesión” y “Registrarse” -->
+    <nav class="login__tabs" aria-label="Tabs de autenticación">
+        <!-- La primera pestaña está activa -->
+        <a href="registrarse.html" class="login__tab login__tab--active" class="login__tab">Registrarse</a>
+        <a href="iniciarSesion.html" >Iniciar sesión</a>
+    </nav>
+    </header>
+
+    <main>
+        <section class="login">
+
+    <div class="login__container" role="form" aria-labelledby="login-title">
+        <h2 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h2>
+        <p class="login__subtitle">Te prometemos que amarás cada correo electrónico que te enviemos.</p>
+
+    <form class="login__form">
+        <label for="nombre" class="login__label">nombre</label>
+        <input type="name" id="name" class="login__input" placeholder="Introducir nombre " required />
+
+        <label for="apellido" class="login__label">apellido</label>
+        <input type="apellido" id="apellido" class="login__input" placeholder="Introducir tu apellido "  />
+
+        <label for="fecha" class="login__label">Fecha de nacimiento</label>
+        <input type="date" id="date" class="login__input" placeholder="Introducir tu fecha de nacimiento "  />
+
+        <label for="email" class="login__label">Correo electrónico</label>
+        <input type="email" id="email" class="login__input" placeholder="Introducir tu correo electronico" required />
+
+        <label for="password" class="login__label">Contraseña</label>
+        <input type="password" id="password" class="login__input" placeholder="Introducir tu contraseña" required />
+
+    <div class="login__options">
+        <label class="login__remember">
+        <input type="checkbox" /> Recuérdame
+        </label>
+        <a href="#" class="login__forgot">¿Perdiste u olvidaste tus datos?</a>
+    </div>
+
+        <button type="submit" class="login__btn"><a href="Products.html">Registrarse</a></button>
+    </form>
+
+    <div class="login__divider">o también</div>
+
+    <div class="login__socials">
+        <a href="#" class="login__social login__social--facebook" aria-label="Iniciar con Facebook">f</a>
+        <a href="#" class="login__social login__social--google" aria-label="Iniciar con Google">G</a>
+    </div>
+    </div>
+</section>
+
+    </main>
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 75c41238002fc5133ba514aaa5624b4c048d0b20
+=======
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registrarse – NESCAFÉ®</title>
+
+<!-- SEO: estas pantallas no deberían indexarse -->
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Crea tu cuenta NESCAFÉ® para guardar tus preferencias y comprar más rápido." />
+<script src="js/login.js" defer></script>
+<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="register-background">
+<!-- Cabecera con flecha y pestañas -->
+<header class="login__header" aria-label="Navegación de autenticación">
+    <!-- Botón de retroceso -->
+    <button class="login__back" type="button" aria-label="Volver">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="#4B2E2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </button>
+
+    <!-- Pestañas -->
+    <nav class="login__tabs" aria-label="Pestañas de autenticación">
+    <a href="registrarse.html" class="login__tab login__tab--active" aria-current="page">Registrarse</a>
+    <a href="iniciarSesion.html" class="login__tab">Iniciar sesión</a>
+    </nav>
+</header>
+
+<main>
+    <section class="login">
+    <div class="login__container" aria-labelledby="register-title">
+        <h1 class="login__title" id="register-title">Crea tu cuenta NESCAFÉ®</h1>
+        <p class="login__subtitle">Recibe novedades y guarda tus preferencias. Puedes darte de baja cuando quieras.</p>
+
+        <form class="login__form" action="#" method="post" novalidate>
+        <label for="nombre" class="login__label">Nombre</label>
+        <input
+            type="text"
+            id="nombre"
+            name="first_name"
+            class="login__input"
+            placeholder="Introduce tu nombre"
+            autocomplete="given-name"
+            required
+        />
+
+        <label for="apellido" class="login__label">Apellido</label>
+        <input
+            type="text"
+            id="apellido"
+            name="last_name"
+            class="login__input"
+            placeholder="Introduce tu apellido"
+            autocomplete="family-name"
+            required
+        />
+
+        <label for="fecha" class="login__label">Fecha de nacimiento</label>
+        <input
+            type="date"
+            id="fecha"
+            name="birthdate"
+            class="login__input"
+            autocomplete="bday"
+        />
+
+        <label for="email" class="login__label">Correo electrónico</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            class="login__input"
+            placeholder="Introduce tu correo electrónico"
+            autocomplete="email"
+            required
+        />
+
+        <label for="password" class="login__label">Contraseña</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            class="login__input"
+            placeholder="Mínimo 8 caracteres"
+            autocomplete="new-password"
+            minlength="8"
+            required
+            aria-describedby="password-help"
+        />
+        <small id="password-help" class="login__help">Usa al menos 8 caracteres; combina letras y números.</small>
+
+        <div class="login__options">
+            <label class="login__remember">
+            <input type="checkbox" name="terms" required />
+            Acepto los <a href="#" target="_blank" rel="noopener">términos y condiciones</a> y la
+            <a href="#" target="_blank" rel="noopener">política de privacidad</a>.
+            </label>
+        </div>
+
+        <button type="submit" class="login__btn">Registrarse</button>
+
+        <p class="login__alt">
+            ¿Ya tienes cuenta? <a href="iniciarSesion.html">Inicia sesión</a>
+        </p>
+        </form>
+
+        <div class="login__divider" role="separator" aria-label="o también">o también</div>
+
+        <div class="login__socials">
+        <button type="button" class="login__social login__social--facebook" aria-label="Registrarse con Facebook">f</button>
+        <button type="button" class="login__social login__social--google" aria-label="Registrarse con Google">G</button>
+        </div>
+    </div>
+    </section>
+</main>
+
+
+</body>
+</html>
+>>>>>>> origin/seo-accesibilidad
