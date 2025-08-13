@@ -1,172 +1,75 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
-
-    <link rel="stylesheet" href="styles/main.css">
-
-</head>
-<body class="register-background">
-
-    
-         <!-- CABECERA CON FLECHA Y PESTAÑAS -->
-  <header class="login__header"  role="navigation" aria-label="Navegación de autenticación">
-    <!-- Botón de retroceso -->
-    <button class="login__back" aria-label="Volver" >
-        <a href="index.html"></a>
-      <svg
-
 <html lang="es" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Iniciar sesión - NESCAFÉ®</title>
-<!-- SEO -->
-<meta name="description" content="Accede a tu cuenta NESCAFÉ® con tu correo y contraseña y gestiona tus preferencias.">
-<meta name="keywords" content="iniciar sesión,login,cuenta nescafé,café">
-<meta name="robots" content="noindex, nofollow">
-<!-- Open Graph -->
-<meta property="og:locale" content="es_MX">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Iniciar sesión - NESCAFÉ®">
-<meta property="og:description" content="Inicia sesión en tu cuenta NESCAFÉ® y gestiona tus preferencias.">
-<meta property="og:url" content="https://tu-dominio/iniciarSesion.html">
-<meta property="og:image" content="images/login-hero.jpg">
-<meta property="og:site_name" content="NESCAFÉ®">
-<link rel="canonical" href="https://tu-dominio/iniciarSesion.html">
-<link rel="stylesheet" href="styles/main.css">
-<script src="js/login.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Iniciar sesión – NESCAFÉ®</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Accede a tu cuenta NESCAFÉ® con tu correo y contraseña y gestiona tus preferencias.">
+  <meta name="keywords" content="iniciar sesión,login,cuenta nescafé,café">
+  <!-- Las páginas de login normalmente no se indexan -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Iniciar sesión – NESCAFÉ®">
+  <meta property="og:description" content="Inicia sesión en tu cuenta NESCAFÉ® y gestiona tus preferencias.">
+  <meta property="og:url" content="https://tu-dominio/iniciarSesion.html">
+  <meta property="og:image" content="images/login-hero.jpg">
+  <meta property="og:site_name" content="NESCAFÉ®">
+
+  <!-- Canonical (por convención, aunque sea noindex) -->
+  <link rel="canonical" href="https://tu-dominio/iniciarSesion.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="register-background">
-<a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
 
+  <!-- CABECERA -->
+  <header class="login__header" role="banner">
+    <div class="login__header-inner">
+      <!-- Botón volver (no anidar <a> dentro de <button>) -->
+      <button type="button" class="login__back" aria-label="Volver a la página anterior" id="btn-back">
+        <!-- (si usas ícono, deja alt="" o aria-hidden="true") -->
+        <!-- svg omitido por longitud -->
+        ←
+      </button>
 
-<header class="login__header" role="banner">
-
-    
-    <button type="button" class="login__back" aria-label="Volver a la página anterior" id="btn-back">
-    <svg
->>>>>>> origin/seo-accesibilidad
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-<<<<<<< HEAD
-        aria-hidden="true"
-      >
-        <path
-          d="M15 18L9 12L15 6"
-          stroke="#4B2E2E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    <script>
-        const backButton = document.querySelector('.login__header');
-        if (backButton) {
-        backButton.addEventListener('click', () => {
-        window.history.back();
-    });
- }
-</script>
-    </button>
-
-    <!-- Pestañas “Iniciar sesión” y “Registrarse” -->
-    <nav class="login__tabs" aria-label="Tabs de autenticación">
-        <!-- La primera pestaña está activa -->
-         <a href="iniciarSesion.html" class="login__tab login__tab--active">Iniciar sesión</a>
-        <a href="registrarse.html"  class="login__tab">Registrarse</a>
-        
-    
-    </nav>
-</header>
-
-    <main>
-        <section class="login">
-<div class="login__container" role="form" aria-labelledby="login-title">
-    <h2 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h2>
-    <p class="login__subtitle">Te prometemos que amarás cada correo electrónico que te enviemos.</p>
-
-    <form class="login__form">
-        <label for="email" class="login__label">Correo electrónico</label>
-        <input type="email" id="email" class="login__input" placeholder="Introducir nombre completo" required />
-
-        <label for="password" class="login__label">Contraseña</label>
-        <input type="password" id="password" class="login__input" placeholder="Introducir nombre completo" required />
-
-    <div class="login__options">
-        <label class="login__remember">
-        <input type="checkbox" /> Recuérdame
-        </label>
-        <a href="#" class="login__forgot">¿Perdiste u olvidaste tus datos?</a>
-    </div>
-
-        <button type="submit" class="login__btn"><a href="Products.html">Iniciar sesión</a></button>
-    </form>
-
-    <div class="login__divider">o también</div>
-
-    <div class="login__socials">
-        <a href="#" class="login__social login__social--facebook" aria-label="Iniciar con Facebook">f</a>
-        <a href="#" class="login__social login__social--google" aria-label="Iniciar con Google">G</a>
-    </div>
-    </div>
-</section>
-
-    </main>
-</body>
-<<<<<<< HEAD
-</html>
-=======
-</html>
->>>>>>> 75c41238002fc5133ba514aaa5624b4c048d0b20
-=======
-        aria-hidden="true">
-        <path
-        d="M15 18L9 12L15 6"
-        stroke="#4B2E2E"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        />
-    </svg>
-    </button>
-
-    <!-- Tabs de autenticación -->
-    <nav class="login__tabs" aria-label="Pestañas de autenticación" role="navigation">
+      <!-- Tabs de autenticación -->
+      <nav class="login__tabs" aria-label="Pestañas de autenticación" role="navigation">
         <ul class="login__tabs-list" role="tablist">
-        <li role="presentation">
+          <li role="presentation">
             <a href="iniciarSesion.html" role="tab" aria-selected="true" tabindex="0" class="login__tab login__tab--active">Iniciar sesión</a>
-        </li>
-        <li role="presentation">
+          </li>
+          <li role="presentation">
             <a href="registrarse.html" role="tab" aria-selected="false" tabindex="-1" class="login__tab">Registrarse</a>
-        </li>
+          </li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-</header>
-
-<main id="main" role="main">
+  <main id="main" role="main">
     <section class="login" aria-labelledby="login-title">
-    <div class="login__container">
-        
+      <div class="login__container">
+        <!-- H1 único en la página -->
         <h1 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h1>
         <p class="login__subtitle">Prometemos enviarte solo correos con buen sabor y cero spam.</p>
 
-        
+        <!-- Mensajes accesibles -->
         <div id="form-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
-        
+        <!-- Formulario accesible -->
         <form class="login__form" action="#" method="post" aria-describedby="login-help">
-        <p id="login-help" class="visually-hidden">Ingresa tu correo y contraseña para acceder a tu cuenta.</p>
+          <p id="login-help" class="visually-hidden">Ingresa tu correo y contraseña para acceder a tu cuenta.</p>
 
-        <label for="email" class="login__label">Correo electrónico</label>
-        <input
+          <label for="email" class="login__label">Correo electrónico</label>
+          <input
             type="email"
             id="email"
             name="email"
@@ -177,8 +80,8 @@
             required
             aria-required="true">
 
-        <label for="password" class="login__label">Contraseña</label>
-        <input
+          <label for="password" class="login__label">Contraseña</label>
+          <input
             type="password"
             id="password"
             name="password"
@@ -189,111 +92,62 @@
             required
             aria-required="true">
 
-        <div class="login__options">
+          <div class="login__options">
             <label class="login__remember">
-            <input type="checkbox" name="remember" id="remember" autocomplete="on">
-            Recuérdame
+              <input type="checkbox" name="remember" id="remember" autocomplete="on">
+              Recuérdame
             </label>
 
             <a href="#" class="login__forgot" rel="nofollow">¿Olvidaste tus datos?</a>
-        </div>
-
-        <!-- Botón real de envío (sin <a> dentro) -->
-        <button type="submit" class="login__btn" aria-label="Iniciar sesión en NESCAFÉ">Iniciar sesión</button>
-=======
-<html lang="es" dir="ltr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Iniciar sesión - NESCAFÉ®</title>
-
-  <!-- SEO básico -->
-  <meta name="description" content="Accede a tu cuenta NESCAFÉ® con tu correo y contraseña." />
-  <meta name="robots" content="noindex, nofollow" />
-
-  <link rel="stylesheet" href="styles/main.css" />
-</head>
-<body class="register-background">
-  <a href="#main" class="skip-link">Saltar al contenido principal</a>
-
-  <!-- Header del login (solo uno) -->
-  <header class="login__header" role="banner">
-    <button type="button" class="login__back" aria-label="Volver" id="btn-back">
-      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M15 18L9 12L15 6" stroke="#4B2E2E" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </button>
-
-    <nav class="login__tabs" aria-label="Pestañas de autenticación" role="navigation">
-      <ul class="login__tabs-list" role="tablist">
-        <li role="presentation">
-          <a href="iniciarSesion.html" role="tab" aria-selected="true" class="login__tab login__tab--active">Iniciar sesión</a>
-        </li>
-        <li role="presentation">
-          <a href="registrarse.html" role="tab" aria-selected="false" class="login__tab">Registrarse</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="main" role="main">
-    <section class="login" aria-labelledby="login-title">
-      <div class="login__container">
-        <h1 class="login__title" id="login-title">¡Bienvenido de nuevo a tu cuenta NESCAFÉ®!</h1>
-        <p class="login__subtitle">Prometemos enviarte solo correos con buen sabor y cero spam.</p>
-
-        <form class="login__form" action="#" method="post">
-          <label for="email" class="login__label">Correo electrónico</label>
-          <input type="email" id="email" name="email" class="login__input"
-                 placeholder="tu@correo.com" autocomplete="email" required />
-
-          <label for="password" class="login__label">Contraseña</label>
-          <input type="password" id="password" name="password" class="login__input"
-                 placeholder="••••••••" minlength="8" autocomplete="current-password" required />
-
-          <div class="login__options">
-            <label class="login__remember">
-              <input type="checkbox" name="remember" /> Recuérdame
-            </label>
-            <a href="#" class="login__forgot">¿Olvidaste tus datos?</a>
           </div>
 
-          <button type="submit" class="login__btn">Iniciar sesión</button>
->>>>>>> mejoras
+          <!-- Botón real de envío (sin <a> dentro) -->
+          <button type="submit" class="login__btn" aria-label="Iniciar sesión en NESCAFÉ">Iniciar sesión</button>
         </form>
 
         <div class="login__divider" role="separator" aria-label="Otras opciones">o también</div>
 
         <div class="login__socials" role="group" aria-label="Iniciar con redes sociales">
-<<<<<<< HEAD
-        <a href="#" class="login__social login__social--facebook" aria-label="Iniciar sesión con Facebook" rel="nofollow noopener">f</a>
-        <a href="#" class="login__social login__social--google" aria-label="Iniciar sesión con Google" rel="nofollow noopener">G</a>
-        </div>
-    </div>
-    </section>
-</main>
-
-<noscript>
-    <p>Para una mejor experiencia, habilita JavaScript en tu navegador.</p>
-</noscript>
-
-
-</body>
-</html>
->>>>>>> origin/seo-accesibilidad
-=======
-          <a href="#" class="login__social login__social--facebook" aria-label="Facebook">f</a>
-          <a href="#" class="login__social login__social--google" aria-label="Google">G</a>
+          <a href="#" class="login__social login__social--facebook" aria-label="Iniciar sesión con Facebook" rel="nofollow noopener">f</a>
+          <a href="#" class="login__social login__social--google" aria-label="Iniciar sesión con Google" rel="nofollow noopener">G</a>
         </div>
       </div>
     </section>
   </main>
 
-  <script>
+  <noscript>
+    <p>Para una mejor experiencia, habilita JavaScript en tu navegador.</p>
+  </noscript>
+
+  <!-- JS (defer para performance) -->
+  <script defer>
+    // Volver atrás
     const backBtn = document.getElementById('btn-back');
     if (backBtn) backBtn.addEventListener('click', () => history.back());
+
+    // Enlaces externos seguros: rel noopener si target _blank (ejemplo futuro)
+    document.querySelectorAll('a[target="_blank"]').forEach(a => {
+      if (!a.rel.includes('noopener')) a.rel += ' noopener';
+    });
+
+    // Demo de envío (quitar en prod): evita navegación y muestra estado
+    const form = document.querySelector('.login__form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const status = document.getElementById('form-status');
+        if (status) {
+          status.textContent = 'Iniciando sesión…';
+          setTimeout(() => {
+            status.textContent = 'Sesión iniciada. Redirigiendo a productos…';
+            // Simulación de redirect
+            window.location.href = 'Products.html';
+          }, 800);
+        } else {
+          window.location.href = 'Products.html';
+        }
+      });
+    }
   </script>
 </body>
 </html>
->>>>>>> mejoras
